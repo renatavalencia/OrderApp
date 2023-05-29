@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    tools:context=".PaymentDetailsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_gravity="center_horizontal"
+        android:text="Payment Details"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="26sp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:layout_gravity="end"
+        android:text="19 Mei 2023"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Sales Person"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_sales_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Supriyanto"
+            android:textAlignment="textEnd"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Alamat Pengiriman"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            app:boxCornerRadiusBottomEnd="6dp"
+            app:boxCornerRadiusBottomStart="6dp"
+            app:boxCornerRadiusTopEnd="6dp"
+            app:boxCornerRadiusTopStart="6dp"
+            app:hintEnabled="false"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/au_tv_customer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                android:fontFamily="@font/quicksand_medium"
+                android:textSize="16sp"
+                android:text="Select Cutomer"
+                android:textColor="@color/text_secondary"
+                android:dropDownHeight="wrap_content"
+                android:dropDownWidth="match_parent"
+                android:focusable="false"
+                android:inputType="none"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_penerima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Amber hartono"
+            android:visibility="gone"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:visibility="gone"
+            android:text="Gading Nias Residence Tower Alamanda Jalan Pegangsaan Dua, RT 13/RW 3, Kelapa Gading, Jakarta, ID 14250"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Total"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Rp 198.800"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/bt_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_primary"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Pay"
+            android:textSize="16sp"
+            app:cornerRadius="6dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

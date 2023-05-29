@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/check"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Kalas"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Rp 24.900"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_min"
+                android:layout_width="32dp"
+                android:layout_height="35dp"
+                android:backgroundTint="#D9D9D9"
+                android:textSize="18sp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:layout_gravity="start"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/tv_qty"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="1"
+                android:textSize="14sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_plus"
+                android:layout_width="32dp"
+                android:layout_height="35dp"
+                android:backgroundTint="#D9D9D9"
+                android:textSize="14sp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:layout_gravity="end"
+                android:text="+"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_add_cart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/purple_secondary"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Add to cart"
+            android:textColor="@color/black"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:cornerRadius="6dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
